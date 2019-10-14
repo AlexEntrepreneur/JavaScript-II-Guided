@@ -11,10 +11,10 @@ const cityData = [
   { "city": "Kansas city", "state": "MO", "population": 467007, "land_area": 315 }
 ];
 
-// filter
+// Filter
 
 // Map
 
-// forEach
+// For Each
 
 // Reduce
