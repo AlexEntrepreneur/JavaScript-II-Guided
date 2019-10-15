@@ -97,15 +97,21 @@ console.log(bigCities);
 // Returns NEW transformed array
 // Array remains the same length
 // DONT FORGET THE RETURN KEYWORD
-const lowerCaseCities = cityData.map((currentItem, index, array) => {
+const lowerCaseCityData = cityData.map((currentItem, index, array) => {
   currentItem.city = currentItem.city.toLowerCase();
-  // Return the transformed item
+  // Return the whole transformed item
   return currentItem;
 });
 
-console.log(lowerCaseCities);
+const lowerCaseCityNames = cityData.map((currentItem, index, array) => {
+  // Returns just the names
+  return currentItem.city.toLowerCase();
+});
 
+console.log(lowerCaseCityData);
+console.log(lowerCaseCityNames);
+
+// Reduce
 
 // For Each
 
-// Reduce
