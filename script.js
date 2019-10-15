@@ -124,7 +124,48 @@ const totalCityLandArea = cityData.reduce((accumulator, currentItem, index, arra
 // ^^ Initial value
 // If no initial value provided = first item
 
+// Emma
+const totalPop = cityData.reduce((acc, curr, index, arr) => { return acc + curr.population; }, 0);
+
+console.log(totalPop);
 console.log(totalCityLandArea);
 
-// For Each
+// Niklas
+const lambdaStudents = [
+  { "name": "Rodrigo", "gender": "M", "age": 25 },
+  { "name": "Emma", "gender": "F", "age": 25 },
+  { "name": "Seb", "gender": "M", "age": 25 },
+  { "name": "Nick", "gender": "M", "age": 25 }
+]
+let agesCombined = lambdaStudents.reduce((accumulator, currentItem) => {
+  return accumulator + currentItem.age;
+}, 0);
 
+console.log(agesCombined);
+
+// For Each
+// Do something "for each" item
+// Different syntax for for loops
+// DOES NOT RETURN A NEW ARRAY
+let evacuation = [];
+
+cityData.forEach((currentItem) => {
+  currentItem.population = 0;
+  evacuation.push(currentItem);
+});
+
+console.log(evacuation);
+
+// You can chain them together!
+// const transformed = cityData.filter().map().reduce();
+
+// Why are array methods important?
+  // Don't mutate the existing array
+  // Functional vs Imperative
+  // Array Methods = Functional
+  // Functional = uses HOF & Callbacks
+    // Cleaner, shorter, easier to understand + more abstract
+  // For loops = Imperative
+  // Imperative = defined in detail
+    // More performant
+    // Harder to understand + less abstract
