@@ -20,13 +20,21 @@ function closureExample() {
 // World => Kingdom => City => Town
 let totalPopulation = '2bn';
 
-function kingdom() {
+const kingdom = () => {
   const queen = 'Queen Ruby';
   console.log(`Long live ${queen}`);
 
-  function city() {
+  const city = () => {
     const mayor = 'Mayor Jim';
     console.log(`${queen} demands more taxes!`);
+
+    const town = () => {
+      // Overwriting queen var
+      // const queen = 'Local Queen';
+      const townCrier = 'Crier Tom';
+      console.log(`${townCrier} has a message for the town: ${queen} demands more taxes! And ${mayor} demands half of your crops`);
+    }
+    town();
   }
   city();
 }
