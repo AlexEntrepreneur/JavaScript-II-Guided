@@ -20,6 +20,19 @@ function closureExample() {
 // World => Kingdom => City => Town
 let totalPopulation = '2bn';
 
+function kingdom() {
+  const queen = 'Queen Ruby';
+  console.log(`Long live ${queen}`);
+
+  function city() {
+    const mayor = 'Mayor Jim';
+    console.log(`${queen} demands more taxes!`);
+  }
+  city();
+}
+
+kingdom();
+
 //====== Higher Order Functions ======//
 
 
