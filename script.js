@@ -46,15 +46,25 @@ kingdom();
 
 // Callbacks
 // Function that is to be called after another function has finished executing
-function compute(param1, param2, callbackFunction) {
-  return callbackFunction(param1, param2);
+function compute(num1, num2, cb) {
+  return cb(num1, num2);
 }
 
-function add(a, b) {
+const add = (a, b) => {
   return a + b;
 }
 
+// Blake
+const multiply = (a, b) => {
+  return a * b;
+}
+
+// Ken
+const divide = (a, b) => a / b;
+
 console.log(compute(543, 234, add));
+console.log(compute(21, 45, multiply)); 
+console.log(compute(21, 5, divide)); 
 
 
 
@@ -63,12 +73,38 @@ const cityData = [
   { "city": "Seattle", "state": "WA", "population": 652405, "land_area": 83.9 },
   { "city": "New york", "state": "NY", "population": 8405837, "land_area": 302.6 },
   { "city": "Boston", "state": "MA", "population": 645966, "land_area": 48.3 },
-  { "city": "Kansas city", "state": "MO", "population": 467007, "land_area": 315 }
+  { "city": "Kansas city", "state": "MO", "population": 467007, "land_area": 315 },
+  { "city": "London", "state": "N/A", "population": 8136000, "land_area": 607 }
 ];
 
 // Filter
+// Returns a brand NEW filtered array
+// Selects a subset of array items
+// Return true = keep item
+// Return false = discard item
+let filteredCities = cityData.filter(function (currentItem, i) {
+  return currentItem.population > 650000;
+});
+
+let bigCities = cityData.filter((currentItem) => {
+  return currentItem.land_area > 50;
+});
+
+console.log(filteredCities);
+console.log(bigCities);
 
 // Map
+// Returns NEW transformed array
+// Array remains the same length
+// DONT FORGET THE RETURN KEYWORD
+const lowerCaseCities = cityData.map((currentItem, index, array) => {
+  currentItem.city = currentItem.city.toLowerCase();
+  // Return the transformed item
+  return currentItem;
+});
+
+console.log(lowerCaseCities);
+
 
 // For Each
 
