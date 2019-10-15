@@ -1,4 +1,24 @@
 //====== Lexical Scope & Closure ======//
+// Scope
+globalVar = 'Some global var';
+
+function localScope() {
+  const localVariable = 'Some local variable';
+  console.log(localVariable);
+}
+
+// console.log(localVariable);
+
+// Closure
+// Function is a closure
+// Functions have access to vars defined outside of it
+function closureExample() {
+  console.log(globalVar);
+}
+
+// UN -> US -> California
+// World => Kingdom => City => Town
+let totalPopulation = '2bn';
 
 //====== Higher Order Functions ======//
 
