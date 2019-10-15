@@ -42,6 +42,20 @@ const kingdom = () => {
 kingdom();
 
 //====== Higher Order Functions ======//
+// Function that takes/returns other functions
+
+// Callbacks
+// Function that is to be called after another function has finished executing
+function compute(param1, param2, callbackFunction) {
+  return callbackFunction(param1, param2);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+console.log(compute(543, 234, add));
+
 
 
 //====== Array Methods ======//
