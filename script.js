@@ -76,6 +76,8 @@ const cityData = [
   { "city": "Kansas city", "state": "MO", "population": 467007, "land_area": 315 },
   { "city": "London", "state": "N/A", "population": 8136000, "land_area": 607 }
 ];
+// This is not creating a new array
+const anotherArray = cityData;
 
 // Filter
 // Returns a brand NEW filtered array
@@ -112,6 +114,17 @@ console.log(lowerCaseCityData);
 console.log(lowerCaseCityNames);
 
 // Reduce
+// Combines all item into one
+// Many items to one item
+// Returns a NEW value
+
+const totalCityLandArea = cityData.reduce((accumulator, currentItem, index, array) => {
+  return accumulator + currentItem.land_area;
+}, 0);
+// ^^ Initial value
+// If no initial value provided = first item
+
+console.log(totalCityLandArea);
 
 // For Each
 
