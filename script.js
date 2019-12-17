@@ -155,13 +155,26 @@ console.log(processSum(nums, sumItems));
 
 //====== Array Methods ======//
 const cityData = [
-  { "city": "Seattle", "state": "WA", "population": 652405, "land_area": 83.9 },
-  { "city": "New york", "state": "NY", "population": 8405837, "land_area": 302.6 },
-  { "city": "Boston", "state": "MA", "population": 645966, "land_area": 48.3 },
-  { "city": "Kansas city", "state": "MO", "population": 467007, "land_area": 315 }
+  { city: "Seattle", state: "WA", population: 652405, land_area: 83.9 },
+  { city: "New york", state: "NY", population: 8405837, land_area: 302.6 },
+  { city: "Boston", state: "MA", population: 645966, land_area: 48.3 },
+  { city: "Kansas city", state: "MO", population: 467007, land_area: 315 },
+  { city: "London", state: "N/A", population: 8899375, land_area: 607 }
 ];
 
 // FILTER
+// Returns a brand NEW filtered array
+// Selects a subset of items
+// Criteria return true = keep item
+// Criteria return false = discard item
+
+const filteredCities = cityData.filter((currentItem, index, array) => {
+  return currentItem.population > 650000;
+});
+
+console.log(filteredCities);
+
+
 
 // MAP
 
