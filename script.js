@@ -1,7 +1,48 @@
 //====== Lexical Scope & Closure ======//
 // SCOPE
+const globalVar = 'some global variable';
+
+function localScope() {
+  const localVar = 'some local variable';
+}
+
+// console.log(localVar);
+
+localScope();
 
 // CLOSURE
+function outerFunction() {
+  const outerVar = 'some outer variable';
+
+  function closureExample() {
+    const closureVar = 'some inner variable';
+
+    console.log(closureVar);
+    console.log(outerVar);
+    console.log(globalVar);
+  }
+  closureExample();
+}
+
+outerFunction();
+
+// UN -> USA -> California
+// World => Kingdom => City => Town
+let totalPopulation = '2bn';
+
+const kingdom = () => {
+  const queen = 'Queen Ruby';
+  console.log(`Long live ${queen}!`);
+  
+  const city = () => {
+    const mayor = 'Mayor Jim';
+    console.log(`${queen} demands more taxes!`);
+  }
+
+  city();
+}
+
+kingdom();
 
 //====== Higher Order Functions ======//
 
