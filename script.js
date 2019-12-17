@@ -37,6 +37,15 @@ const kingdom = () => {
   const city = () => {
     const mayor = 'Mayor Jim';
     console.log(`${queen} demands more taxes!`);
+
+    const town = () => {
+      const townCrier = 'Crier Tom';
+      console.log(
+        `${townCrier} has a message for the town: ${queen} demands more taxes! ${mayor} demands half of your crops!`
+      );
+    }
+
+    town();
   }
 
   city();
