@@ -167,16 +167,40 @@ const cityData = [
 // Selects a subset of items
 // Criteria return true = keep item
 // Criteria return false = discard item
-
+// DONT FORGET THE RETURN KEYWORD
 const filteredCities = cityData.filter((currentItem, index, array) => {
   return currentItem.population > 650000;
 });
 
 console.log(filteredCities);
 
+// 1. Create a function called getBigCities args: (array)
+// Filter the array for cities with a land_area above 100
 
+function getBigCities(array) {
+  const filtered = array.filter(currentItem => currentItem.land_area > 100);
+
+  return filtered;
+}
+
+console.log(getBigCities(cityData));
 
 // MAP
+// Returns a brand NEW transformed array
+// Array remains the same length
+// DONT FORGET THE RETURN KEYWORD
+
+function getLowerCaseCityNames(array) {
+  return array.map((currentItem, index, array) => {
+    currentItem.city = currentItem.city.toLowerCase();
+    return currentItem.city;
+  });
+}
+
+console.log(getLowerCaseCityNames(cityData));
+
+// 1. Create a function called makeCitySentence that receives an array as an arg
+// 2. Return a new array containing the sentence "{city} has a population of {x} people in a land area totalling {y} sq miles." for each of the cities in the array.
 
 // REDUCE
 
