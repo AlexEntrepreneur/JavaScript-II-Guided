@@ -1,4 +1,7 @@
 //====== Lexical Scope & Closure ======//
+// SCOPE
+
+// CLOSURE
 
 //====== Higher Order Functions ======//
 
@@ -11,10 +14,23 @@ const cityData = [
   { "city": "Kansas city", "state": "MO", "population": 467007, "land_area": 315 }
 ];
 
-// Filter
+// FILTER
 
-// Map
+// MAP
 
-// For Each
+// REDUCE
 
-// Reduce
+// FOREACH
+
+
+
+
+// Why are array methods important?
+  // They don't mutate the existing array
+  // Array Methods are "functional"
+  // Functional = uses HOF & Callbacks
+    // Cleaner, shorter, easier to understand + more abstract
+  // For loops = Imperative
+  // Imperative = every step defined in literal detail
+    // More performant
+    // Harder to understand + less abstract
