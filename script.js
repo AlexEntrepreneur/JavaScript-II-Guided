@@ -203,6 +203,10 @@ console.log(getLowerCaseCityNames(cityData));
 // 2. Return a new array containing the sentence "{city} has a population of {x} people in a land area totalling {y} sq miles." for each of the cities in the array.
 
 // REDUCE
+// Combines all items into one
+// Many items to one item
+// Returns a NEW value
+
 
 // FOREACH
 
