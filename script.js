@@ -206,11 +206,43 @@ console.log(getLowerCaseCityNames(cityData));
 // Combines all items into one
 // Many items to one item
 // Returns a NEW value
+function getTotalPopulations(array) {
+  return array.reduce((accumulator, currentItem, index, array) => {
+    return accumulator + currentItem.population;
+  }, 0);
+  // ^^ Initial value of the accumulator
+  // If no value value provided = first array item
+}
 
+console.log(getTotalPopulations(cityData));
+
+
+// 1. Create a function called getTotalLandArea that receives an array as an arg
+// 2. Return a new array containing the total land area of all the cities in the array
 
 // FOREACH
+// Do something for each of the items
+// Different syntax to for loops
+// DOES NOT RETURN A NEW ARRAY
+// DOES NOT REQUIRE THE RETURN KEYWORD
 
+function evacuateCities(array) {
+  let newArray = [];
 
+  array.forEach((currentItem, index, array) => {
+    currentItem.population = 0;
+    newArray.push(currentItem);
+  });
+
+  return newArray;
+}
+
+console.log(evacuateCities(cityData));
+
+// You can chain them together!
+// const transformed = cityData.filter().map().reduce();
+
+// Reimplement your getTotalPopulation function using forEach instead of reduce
 
 
 // Why are array methods important?
