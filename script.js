@@ -41,7 +41,7 @@ const kingdom = () => {
 
     const town = () => {
       // Overwriting queen var
-      const queen = 'Local Queen';
+      // const queen = 'Local Queen';
       const townCrier = 'Crier Tom';
       console.log(
         `${townCrier} has a message for the town: ${queen} demands more taxes! ${mayor} demands half of your crops!`
@@ -56,7 +56,83 @@ const kingdom = () => {
 
 kingdom();
 
+// Zakaria
+const heros = () => {
+  const batman = "Batman";
+  console.log(`I'm the ${batman}`);
+  
+  const avengers = () => {
+    const ironMan = "Dead meat";
+    console.log(`${batman} won't save you ${ironMan}`)
+  }
+  avengers();
+}
+
+heros();
+
+// Amin
+const footballClub = () => {
+  const chairman = "Fat Cat";
+  console.log(`${chairman} is here to invest in the football club!`);
+  const coachingStaff = () => {
+    const manager = `The best football manager`;
+    console.log(
+      `${manager} now has plenty of money to spend on improving the squad!`
+    );
+    const playingSquad = () => {
+      const player = "Big Shot";
+      const fans = "people";
+      console.log(
+        `${player} has has just signed a new ${player} to bring home all the trophies and make the ${fans} happy!`
+      );
+      console.log(chairman, manager);
+    };
+    playingSquad();
+  };
+  coachingStaff();
+};
+footballClub();
+
+
 //====== Higher Order Functions ======//
+// Function that takes/returns other functions
+
+// Callbacks
+
+function compute(num1, num2, cb) {
+  // Run some other other code first
+  console.log('computing value...');
+  
+  return cb(num1, num2);
+}
+
+const add = (a, b) => {
+  return a + b;
+}
+
+ const multiply = (a, b) => {
+  return a * b;
+}
+
+function processArray(array, cb) {
+  return cb(array);
+}
+
+const sortArray = (arr) => {
+  return arr.sort((a, b) => {
+    if (a > b) {
+      return 1;
+    } else if (b > a) {
+      return -1;
+    }
+    return 0;
+  });
+}
+
+
+console.log(compute(543, 321, add));
+console.log(compute(543, 321, multiply));
+console.log(processArray([543, 321, 9087, 980], sortArray));
 
 
 //====== Array Methods ======//
