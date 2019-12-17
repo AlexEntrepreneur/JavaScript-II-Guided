@@ -129,7 +129,8 @@ const sortArray = (arr) => {
   });
 }
 
-
+// 1. Create a HOF called processSum that takes an array & callback as args
+// 2. Create a callback that returns the sum of all numbers within the array
 console.log(compute(543, 321, add));
 console.log(compute(543, 321, multiply));
 console.log(processArray([543, 321, 9087, 980], sortArray));
