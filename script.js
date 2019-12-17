@@ -30,7 +30,7 @@ const kingdom = () => {
 
     const town = () => {
       // Overwriting queen var
-      // const queen = 'Local Queen';
+      const queen = 'Local Queen';
       const townCrier = 'Crier Tom';
       console.log(`${townCrier} has a message for the town: ${queen} demands more taxes! And ${mayor} demands half of your crops`);
     }
@@ -74,7 +74,7 @@ const cityData = [
   { "city": "New york", "state": "NY", "population": 8405837, "land_area": 302.6 },
   { "city": "Boston", "state": "MA", "population": 645966, "land_area": 48.3 },
   { "city": "Kansas city", "state": "MO", "population": 467007, "land_area": 315 },
-  { "city": "London", "state": "N/A", "population": 8136000, "land_area": 607 }
+  { "city": "London", "state": "N/A", "population": 8899375, "land_area": 607 }
 ];
 // This is not creating a new array
 const anotherArray = cityData;
@@ -82,8 +82,8 @@ const anotherArray = cityData;
 // Filter
 // Returns a brand NEW filtered array
 // Selects a subset of array items
-// Return true = keep item
-// Return false = discard item
+// Criteria returns true = keep item
+// Criteria returns false = discard item
 let filteredCities = cityData.filter(function (currentItem, i) {
   return currentItem.population > 650000;
 });
@@ -122,26 +122,8 @@ const totalCityLandArea = cityData.reduce((accumulator, currentItem, index, arra
   return accumulator + currentItem.land_area;
 }, 0);
 // ^^ Initial value
-// If no initial value provided = first item
+// If no value provided = first array item
 
-// Emma
-const totalPop = cityData.reduce((acc, curr, index, arr) => { return acc + curr.population; }, 0);
-
-console.log(totalPop);
-console.log(totalCityLandArea);
-
-// Niklas
-const lambdaStudents = [
-  { "name": "Rodrigo", "gender": "M", "age": 25 },
-  { "name": "Emma", "gender": "F", "age": 25 },
-  { "name": "Seb", "gender": "M", "age": 25 },
-  { "name": "Nick", "gender": "M", "age": 25 }
-]
-let agesCombined = lambdaStudents.reduce((accumulator, currentItem) => {
-  return accumulator + currentItem.age;
-}, 0);
-
-console.log(agesCombined);
 
 // For Each
 // Do something "for each" item
